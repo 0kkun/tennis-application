@@ -14,8 +14,4 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:name])
   end
 
-  def update_resource(resource, params)
-    resource.update_without_password(params)
-  end
-
 end
