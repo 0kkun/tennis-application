@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width  : 100vw;
+  background-image: url("tennis-background-image.jpeg");
+  background-size: cover;
+  @import "modules/header";
+  .main {
+    padding-top: 100px; /* ヘッダー分 */
+    width  : 100%;
+    height: calc( 100% - 30px); /* フッター分 */
+    display: flex;
+    @import "modules/content_start";
+    @import "modules/content_left";
+    @import "modules/content_center";
+    @import "modules/content_right";
+    @import "modules/content_chat";
+  }
+  @import "modules/footer";
+}
