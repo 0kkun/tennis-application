@@ -4,7 +4,7 @@ class PlayerController < ApplicationController
   end
 
   def new
-
+    @player = Player.all
   end
 
 

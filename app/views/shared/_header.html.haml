@@ -6,17 +6,17 @@
   %ul.header__icons
     - unless user_signed_in?
       %li.header__icons__sign-in
-        = link_to new_user_session_path, class: "sign-in-btn" do
+        = link_to new_user_registration_path, class: "sign-in-btn" do
           = icon('fas', 'sign-in-alt') #サインイン
     - if user_signed_in?
       %li.header__icons__sign-out
         = link_to destroy_user_session_path, method: :delete, class: "sign-out-btn" do
           = icon('fas', 'sign-out-alt') #サインアウト
       %li.header__icons__config
-        = link_to edit_user_path(current_user), class: "config-btn" do
+        = link_to edit_user_registration_path, class: "config-btn" do
           = icon('fa', 'cog') #アカウント編集
-          /users/edit(.:format)
-      -# %li.header__icons__edit
-      -#   = link_to edit_user_player_path(current_user.id), class: "edit-btn" do
-      -#     = icon('fas', 'edit') #編集
+
+      %li.header__icons__edit
+        = link_to new_player_path, class: "edit-btn" do
+          = icon('fas', 'edit') #編集
 

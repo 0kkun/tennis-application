@@ -5,6 +5,5 @@ Rails.application.routes.draw do
 
   #user登録情報編集
   # 1つのユーザーにたくさんのPlayerが登録されている、というネスト
-  resource :users, only: [:edit, :update, :destroy]
   resources :player, only: [:new, :create, :edit, :update]
 end
