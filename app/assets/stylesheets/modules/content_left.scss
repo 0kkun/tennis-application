@@ -1,0 +1,50 @@
+.content-left {
+  width: calc( 100%/3 );
+  height: calc( 100%-20px );
+  margin: 10px;
+  background-color: #EEEEEE;
+  border: 1px solid;
+  border-color: gray;
+
+  .content-left-header {
+    font-size: 20px;
+    color: white;
+    background-color: #222222;
+    text-align: center;
+    font-style: italic;
+  }
+  &__news {
+    font-size: 15px;
+    align-items: center;
+    height: 200px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    list-style-type: square;
+    overflow: scroll;
+  }
+
+  &__items-news {
+    font-size: 15px;
+    align-items: center;
+    height: 200px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    overflow: scroll;
+    list-style-type: square;
+  }
+
+  &__youtube {
+    height: 350px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: scroll;
+  }
+}

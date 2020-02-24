@@ -1,0 +1,36 @@
+.content-center {
+  width: calc( 100%/2 );
+  height: calc( 100%-20px );
+  margin: 10px;
+  background-color: #EEEEEE;
+  border: 1px solid;
+  border-color: gray;
+
+  .content-center-header {
+    font-size: 20px;
+    color: white;
+    background-color: #222222;
+    text-align: center;
+    font-style: italic;
+  }
+  &__tours {
+    align-items: center;
+    height: 200px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    overflow: scroll;
+  }
+  &__tour-movies {
+    height: 590px;
+    width: 95%;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: scroll;
+  }
+
+}
