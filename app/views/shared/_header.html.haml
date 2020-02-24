@@ -2,11 +2,6 @@
   .header__title
     = icon('fas', 'running')
     = link_to "Tennis App", root_path, class: "header-title-text"
-  
-  -# - if user_signed_in?
-  -#   .header__users-info
-  -#     User name : 
-  -#     = current_user.username
 
   %ul.header__icons
     - unless user_signed_in?
