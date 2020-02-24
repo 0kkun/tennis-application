@@ -17,31 +17,5 @@
             = f.label :email
           .field-input
             = f.email_field :email
-
-        -# .field
-        -#   .field-label
-        -#     = f.label :Favorite_Player_Name
-        -#   .field-input
-        -#     = f.text_field :player_id, placeholder: 'Player名を入力してください'
-
         .actions
           = f.submit "Update", class: 'btn'
-
-
-
-  -# = @test
-  -# %br
-  -# - @players.each do |player|
-  -#   = player.player_name_en
-  -#   %br
-  
-  -# = @user.current_user.id
-  -# = @favorite_players
-  -# - form_for @user do |u|
-  -#   = @u.player.player_name_en
-
-  -# - @favorite_players.each do |player|
-  -#   = player.player_name_en
-
-  -# = form_for @players do |f|
-  -#   = f.collection_check_boxes :player_ids, Player.all, :id, :player_name_en
