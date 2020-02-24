@@ -1,0 +1,2 @@
+class PlayerUser < ApplicationRecord
+end
