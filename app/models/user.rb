@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   validates :name, presence: true
 
+  has_many :favorites #User:Favorite => 1:多
+  has_many :player, through: :favorites
 end
