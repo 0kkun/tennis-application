@@ -1,5 +1,13 @@
 @import "./reset";
 @import "font-awesome-sprockets";
 @import "./font-awesome";
+@import "config/configs";
+@import "modules/header";
+@import "modules/content_start";
+@import "modules/content_left";
+@import "modules/content_center";
+@import "modules/content_right";
+@import "modules/content_chat";
+@import "modules/footer";
 @import "./index";
 @import "modules/user";
