@@ -1,6 +1,8 @@
 
 # rake db:seed
 
+User.create!(name: "okkun", email: "test@gmail.com", password: "11111111")
+
 Player.create!(
   [
     {
