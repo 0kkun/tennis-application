@@ -1,2 +1,0 @@
-class PlayerUser < ApplicationRecord
-end
