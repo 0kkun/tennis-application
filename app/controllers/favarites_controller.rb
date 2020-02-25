@@ -1,0 +1,3 @@
+class FavaritesController < ApplicationController
+
+end

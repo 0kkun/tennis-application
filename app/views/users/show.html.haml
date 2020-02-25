@@ -1,3 +1,14 @@
+.notice.text-style
+  - if flash[:notice]
+    %p= flash[:notice]
+    
+.alert.text-style
+  - if flash[:alert]
+    %p= flash[:alert]
+
+= link_to "選手一覧", players_path, class: "book-link"
+
+%br
 %h3 お気に入りの選手
 %table
   %thead
@@ -7,7 +18,7 @@
       %th 選手名(日本語)
   %tbody
     / 削除リンクの為にindex付きのメソッドを使用
-    - @user.players.each_with_index do |player, i|
+    - @user.player.each_with_index do |player, i|
       %tr
         %td= link_to "削除",favorite_path(@favorites[i][:id]), method: :delete
         %td= player.name

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root to: 'player#index'
+  root to: 'top#index'
   resource :sessions, only: [:new, :create, :destroy]
   resources :users
 

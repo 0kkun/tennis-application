@@ -1,0 +1,23 @@
+.notice.text-style
+  - if flash[:notice]
+    %p= flash[:notice]
+    
+.alert.text-style
+  - if flash[:alert]
+    %p= flash[:alert]
+
+
+%table
+  %thead
+    %tr
+      %th
+      %th 選手名
+      %th 日本語
+  %tbody
+    - @players.each do |player|
+      %tr
+        / お気に入り登録ボタン ルートに従いパスを記述、POSTメソッドに指定
+        %td= link_to "登録", add_player_path(player), method: :post
+        / 本の詳細へのリンク
+        %td= link_to player.name, player_path(player)
+        %td= player.name_jp
