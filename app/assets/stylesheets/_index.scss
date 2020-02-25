@@ -1,10 +1,27 @@
 * {
   box-sizing: border-box;
 }
+.notice{
+  font-size: 13px;
+  color: white;
+  font-weight: bold;
+  background-color: #3CCACE;
+  width: 100%;
+  text-align: center;
+}
+.alert {
+  font-size: 13px;
+  color: white;
+  font-weight: bold;
+  background-color: #ed6d6d;
+  width: 100%;
+  text-align: center;
+}
+
 @import "config/configs";
 .wrapper {
   width  : 100vw;
-  background-image: url("tennis-background-image.jpeg");
+  background-image: image-url("tennis-background-image.jpeg");
   background-size: cover;
   @import "modules/header";
   .main {
