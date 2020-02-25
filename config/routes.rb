@@ -2,8 +2,15 @@ Rails.application.routes.draw do
   devise_for :users
 
   root to: 'player#index'
+  resource :sessions, only: [:new, :create, :destroy]
+  resources :users
 
-  #user登録情報編集
-  # 1つのユーザーにたくさんのPlayerが登録されている、というネスト
-  resources :player, only: [:new, :create, :edit, :update]
+  resources :players do
+    member do #プレイヤーの一覧画面からお気に入り登録をする
+      post "add", to: "favorites#create"
+    end
+  end
+  #個人ページからお気に入りを削除する
+  resources :favorites, only: [:destroy]
+
 end
