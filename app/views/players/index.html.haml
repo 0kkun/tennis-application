@@ -1,24 +1,34 @@
 / お気に入り選手一覧ビュー
 
-.notice.text-style
+.notice
   - if flash[:notice]
     %p= flash[:notice]
     
-.alert.text-style
+.alert
   - if flash[:alert]
     %p= flash[:alert]
 
-%table
-  %thead
-    %tr
-      %th
-      %th 選手名
-      %th 日本語
-  %tbody
-    - @players.each do |player|
-      %tr
-        / お気に入り登録ボタン ルートに従いパスを記述、POSTメソッドに指定
-        %td= link_to "登録", add_player_path(player), method: :post
-        / 本の詳細へのリンク
-        %td= link_to player.name, player_path(player)
-        %td= player.name_jp
+
+.wrapper
+  = render "shared/header"
+  .main
+    .favorite-player
+      .favorite-player__title 選手一覧
+
+
+      %table
+        %thead
+          %tr
+            %th.favorite-player__content-title-delete  登録
+            %th.favorite-player__content-title 選手名(英語)
+            %th.favorite-player__content-title 選手名(日本語)
+        %tbody
+          - @players.each do |player|
+            %tr
+              / お気に入り登録ボタン ルートに従いパスを記述、POSTメソッドに指定
+              %td= link_to "登録", add_player_path(player),class:"favorite-btn", method: :post
+              / 本の詳細へのリンク
+              %td= player.name
+              %td= player.name_jp
+    = link_to "戻る", user_path(current_user), class: "players-link"
+  = render "shared/footer"
