@@ -3,11 +3,16 @@
     Tennis Info
   .content-left__news
     - @elements.each do|element|
-      -@favorite_player.each do |player|
-        - if element.inner_text.include?(player)
+      - current_user.player.each do |player|
+        - if element.inner_text.include?(player.name_search_1)
           - link = "http://news.tennis365.net" + element.get_attribute('href')
           %li
-            = link_to element.inner_text, link, class:"link"
+            = link_to element.inner_text, link, class:"news-link"
+
+
+  -# - current_user.player.each do |player|
+  -#   = player.name_search_1
+  -#   %br
 
   .content-left-header
     Item Info
