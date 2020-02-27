@@ -73,7 +73,7 @@ gem 'active_hash'
 gem 'jquery-rails'
 # gem 'kaminari' #ページネーションを実装
 # gem 'nokogiri' # Web Scraping
-# gem 'mechanize' # Web Scraping
+gem 'mechanize' # Web Scraping
 # gem 'carrierwave' #画像がアップロードできるようになる
 # gem 'mini_magick' #画像のリサイズできる
 # gem 'fog-aws' # インターネット上にファイルをアップロードするためのGem
