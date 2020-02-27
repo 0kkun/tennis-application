@@ -14,7 +14,6 @@
     font-style: italic;
   }
   &__tours {
-    align-items: center;
     height: 200px;
     width: 95%;
     margin: 0 auto;
@@ -22,6 +21,25 @@
     margin-bottom: 10px;
     background-color: white;
     overflow: scroll;
+    // display: flex;
+    &__date {
+      font-size: 15px;
+      width: 100px;
+    }
+    &__match {
+      font-size: 15px;
+      width: 350px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      
+    }
+    &__category {
+      font-size: 15px;
+      width: 110px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      line-height: 23px;
+    }
   }
   &__tour-movies {
     height: 590px;
