@@ -2,20 +2,12 @@
   .content-left-header
     Tennis Info
   .content-left__news
-    %li
-      = link_to "テニス＝ナダル、フェデラーの四大大会優勝記録は意識せず", 'https://headlines.yahoo.co.jp/hl?a=20200122-00000057-reut-spo'
-    %li
-      = link_to "大坂、終われば笑顔　崩れかけても立て直す―全豪テニス", 'https://headlines.yahoo.co.jp/hl?a=20200122-00000046-jij-spo'
-    %li
-      = link_to "テニス＝ズベレフ、全豪優勝なら山火事被害に賞金3億円を寄付", 'https://headlines.yahoo.co.jp/hl?a=20200122-00000051-reut-spo'
-    %li
-      = link_to "【速報】西岡良仁が第1セットを先取。世界32位エバンズとの2回戦", 'https://headlines.yahoo.co.jp/hl?a=20200122-00000009-tennisd-spo'
-    %li
-      = link_to "ジョコビッチが2006年以来14年ぶりに1回戦でセットを落とす [全豪テニス]", 'https://headlines.yahoo.co.jp/article?a=20200122-00010005-tennismagv-spo'
-    %li
-      = link_to "大坂、ラケット蹴飛ばしながらもストレート勝利 全豪OP3回戦へ", 'https://headlines.yahoo.co.jp/hl?a=20200122-00000015-jij_afp-spo'
-    %li
-      = link_to "伊藤竜馬vsジョコビッチ 全豪OP2回戦、センターコートの第3試合で激突＜男子テニス＞", 'https://headlines.yahoo.co.jp/hl?a=20200122-00010003-tennisnet-spo'
+    - @elements.each do|element|
+      - current_user.player.each do |player|
+        - if element.inner_text.include?(player.name_search_1)
+          - link = "http://news.tennis365.net" + element.get_attribute('href')
+          %li
+            = link_to element.inner_text, link, class:"news-link"
 
   .content-left-header
     Item Info

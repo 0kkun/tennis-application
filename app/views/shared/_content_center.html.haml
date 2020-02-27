@@ -2,19 +2,18 @@
   .content-center-header
     Tour Info & Chat Space
   .content-center__tours
-    %ul
-      %li 2020/01/20 – 02/02 全豪オープン 2000pt
-      %li 2020/02/24 – 02/29 ドバイ・デューティフリー・テニス選手権 500pt
-      %li 2020/03/12 – 03/22 BNPパリバ・オープン 1000pt
-      %li 2020/05/10 – 05/17 BNLイタリア国際 1000pt
-      %li 2020/05/24 – 06/07 全仏オープン 2000pt
-      %li 2020/06/29 – 07/12 ウィンブルドン(全英オープン) 2000pt
-      %li 2020/07/25 – 08/02 東京2020オリンピック
-      %li 2020/08/16 – 08/23 ウエスタン＆サザン・オープン 1000pt
-      %li 2020/08/31 – 09/13 全米オーブン 2000pt
-      %li 2020/10/05 – 10/11 楽天ジャパンオープン 500pt
-      %li 2020/10/11 – 10/18 ロレックス上海マスターズ 1000pt
-
+    %table.tours-table{:border=>1}
+      %thead
+        %tr
+          %th.tours-table__title 日程
+          %th.tours-table__title 大会名
+          %th.tours-table__title カテゴリ
+      %tbody
+        -@date_elements.zip(@match_elements, @category_elements).each do |date, name, category|
+          %tr
+            %td.tours-table__date=date.inner_text
+            %td.tours-table__match=name.inner_text
+            %td.tours-table__category=category.inner_text 
 
   .content-center-header
     Tour Movies

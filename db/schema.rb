@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2020_02_25_103356) do
     t.string "name"
     t.string "name_jp"
     t.string "name_etc"
+    t.string "name_search_1"
+    t.string "name_search_2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

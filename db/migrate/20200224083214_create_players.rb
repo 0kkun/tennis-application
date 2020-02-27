@@ -4,6 +4,8 @@ class CreatePlayers < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :name_jp
       t.string :name_etc
+      t.string :name_search_1
+      t.string :name_search_2
       t.timestamps
     end
   end

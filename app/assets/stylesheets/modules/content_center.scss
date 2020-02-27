@@ -1,3 +1,34 @@
+.tours-table {
+  border: 1px solid black;
+  &__title {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: $font-family;
+    background-color: rgb(199, 193, 193);
+    text-align: center;
+
+  }
+  &__date {
+    font-size: 14px;
+    font-family: $font-family;
+    width: 100px;
+    padding-left: 5px;
+  }
+  &__match {
+    font-size: 14px;
+    font-family: $font-family;
+    padding-left: 3px;
+  }
+  &__category {
+    font-size: 14px;
+    font-family: $font-family;
+    padding-left: 3px;
+  }
+}
+
+
+
+
 .content-center {
   width: calc( 100%/2 );
   height: calc( 100%-20px );
@@ -14,7 +45,6 @@
     font-style: italic;
   }
   &__tours {
-    align-items: center;
     height: 200px;
     width: 95%;
     margin: 0 auto;
