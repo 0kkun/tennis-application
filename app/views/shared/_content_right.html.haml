@@ -1,34 +1,17 @@
 .content-right
   .content-right-header
     ATP Rank
-  %table.table-flame{:border=>1}
-    %tr
-      %th.table-title Rank
-      %th.table-title Name
-      %th.table-title Country
-      %th.table-title Points
-    %tr
-      %td.data.data-rank 1
-      %td.data.data-name R.Nadal
-      %td.data.data-country スペイン
-      %td.data.data-point 10235
-    %tr
-      %td.data.data-rank 2
-      %td.data.data-name N.ジョコビッチ
-      %td.data.data-country セルビア
-      %td.data.data-point 9720
-    %tr
-      %td.data.data-rank 3
-      %td.data.data-name R.フェデラー
-      %td.data.data-country スイス
-      %td.data.data-point 6590
-    %tr
-      %td.data.data-rank 4
-      %td.data.data-name D.メドベージェフ
-      %td.data.data-country ロシア
-      %td.data.data-point 5960
-    %tr
-      %td.data.data-rank 5
-      %td.data.data-name D.ティエム
-      %td.data.data-country オーストリア
-      %td.data.data-point 5890
+  .content-right__rank-table
+    %table.table-flame{:border=>1}
+      %thead
+        %tr
+          %th.table-title Rank
+          %th.table-title Name
+          %th.table-title Points
+      %tbody
+        -@rank_elements.zip(@rank_name_elements, @point_elements).each do |rank, name, point|
+          %tr
+            %td.data-rank=rank.inner_text
+            %td.data-name=name.inner_text
+            %td.data-point=point.inner_text
+

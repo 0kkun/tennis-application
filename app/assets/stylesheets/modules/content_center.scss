@@ -4,9 +4,9 @@
     font-size: 16px;
     font-weight: bold;
     font-family: $font-family;
-    background-color: rgb(199, 193, 193);
+    background-color: #CCCCCC;
     text-align: center;
-
+    line-height: 25px;
   }
   &__date {
     font-size: 14px;
@@ -17,15 +17,14 @@
   &__match {
     font-size: 14px;
     font-family: $font-family;
-    padding-left: 3px;
+    padding-left: 8px;
   }
   &__category {
     font-size: 14px;
     font-family: $font-family;
-    padding-left: 3px;
+    padding-left: 8px;
   }
 }
-
 
 
 
@@ -45,6 +44,7 @@
     font-style: italic;
   }
   &__tours {
+    align-items: center;
     height: 200px;
     width: 95%;
     margin: 0 auto;

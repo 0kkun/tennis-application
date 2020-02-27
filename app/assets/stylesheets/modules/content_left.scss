@@ -25,6 +25,7 @@
     background-color: white;
     list-style-type: square;
     overflow: scroll;
+    padding: 5px;
   }
 
   &__items-news {
@@ -39,7 +40,13 @@
     overflow: scroll;
     list-style-type: square;
   }
-
+  .product-content {
+    font-size: 14px;
+    font-family: $font-family;
+    width: 350px;
+    padding: 5px;
+    border-bottom: 4px solid rgb(194, 193, 193);
+  }
   &__youtube {
     height: 350px;
     width: 95%;

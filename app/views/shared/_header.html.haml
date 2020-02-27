@@ -16,9 +16,5 @@
         = link_to edit_user_registration_path, class: "config-btn" do
           = icon('fa', 'cog') #アカウント編集
 
-      -# %li.header__icons__edit
-      -#   = link_to user_path(current_user), class: "edit-btn" do
-      -#     = icon('fas', 'edit') #編集
-      
       %li.header__icons__edit
         = link_to "Bookmark Player", user_path(current_user), class: "favorite-player-btn"
