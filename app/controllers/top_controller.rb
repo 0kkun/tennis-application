@@ -31,6 +31,11 @@ class TopController < ApplicationController
     @rank_elements = rank_page.search('#rightCol td.num')
     @point_elements = rank_page.search('#rightCol td.point')
 
+    product_search_url = "https://www.yonex.co.jp/tennis/news/products/"
+    product_agent = Mechanize.new
+    product_page = product_agent.get(product_search_url)
+    @product_elements = product_page.search('.newslist a')
+    
   end
 
 end
