@@ -2,18 +2,18 @@
   .content-center-header
     Tour Info & Chat Space
   .content-center__tours
-    %table.table-flame{:border=>1}
+    %table.tours-table{:border=>1}
       %thead
         %tr
-          %th.table-title 日程
-          %th.table-title 大会名
-          %th.table-title カテゴリ
+          %th.tours-table__title 日程
+          %th.tours-table__title 大会名
+          %th.tours-table__title カテゴリ
       %tbody
         -@date_elements.zip(@match_elements, @category_elements).each do |date, name, category|
           %tr
-            %td=date.inner_text
-            %td=name.inner_text
-            %td=category.inner_text 
+            %td.tours-table__date=date.inner_text
+            %td.tours-table__match=name.inner_text
+            %td.tours-table__category=category.inner_text 
 
   .content-center-header
     Tour Movies
