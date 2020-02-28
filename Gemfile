@@ -79,7 +79,7 @@ gem 'mechanize' # Web Scraping
 # gem 'fog-aws' # インターネット上にファイルをアップロードするためのGem
 # gem 'ransack' #検索機能を追加できる
 # youtubeのAPIを使用するためのGem
-# gem 'google-api-client', '0.9.20', require: 'google/apis/youtube_v3'
+gem 'google-api-client', '0.9.20', require: 'google/apis/youtube_v3'
 # group :production do
 #   gem 'unicorn', '5.4.1'
 # end
