@@ -14,7 +14,7 @@ class TopController < ApplicationController
     opt = {
       q: keyword,
       type: 'video',
-      max_results: 5,
+      max_results: 3,
       order: :date,
       page_token: next_page_token,
       published_after: after.iso8601,
@@ -66,9 +66,38 @@ class TopController < ApplicationController
     product_page = product_agent.get(product_search_url)
     @product_elements = product_page.search('.newslist a')
 
+  
+    favorite_player = Favorite.select("player_id").where("user_id = ?", current_user.id)
+    @favorite_player_name1 = Player.select("name").where(player_id: :favorite_player[0])
+    # @favorites = Favorite.where("user_id = ?", current_user)
 
-    @youtube_data = find_videos('federer nadal')
-    
+    @count = current_user.player.count
+
+    search_player = []
+    current_user.player.each_with_index do |player, i|
+      search_player << player.name
+    end
+  
+    if @count == 1 then
+      @youtube_data_0 = find_videos(search_player[0])
+    elsif @count == 2 then
+      @youtube_data_0 = find_videos(search_player[0])
+      @youtube_data_1 = find_videos(search_player[1])
+    else
+      @youtube_data_0 = find_videos(search_player[0])
+      @youtube_data_1 = find_videos(search_player[1])
+      @youtube_data_2 = find_videos(search_player[2])
+    end
+
+
+    # ユーザーに選択させる機能はあとで実装
+    favorite_brand = "YONEX"
+
+    if favorite_brand == "YONEX"
+      favorite_brand_text =  favorite_brand + "ラケット"
+      @youtube_racket = find_videos(favorite_brand_text)
+    end
+
+
   end
-
 end
