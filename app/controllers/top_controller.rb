@@ -12,16 +12,15 @@ class TopController < ApplicationController
 
     #検索オプションの設定。
     opt = {
+      #リファレンス： https://developers.google.com/youtube/v3/docs/videos/list?hl=ja
       q: keyword,
       type: 'video',
-      max_results: 3,
+      max_results: 2,
       order: :date,
       page_token: next_page_token,
       published_after: after.iso8601,
       published_before: before.iso8601
     }
-    # list_searchesメソッド。下記リファレンスURL
-    # https://developers.google.com/youtube/v3/docs/videos/list?hl=ja
     # パラメータの中身は、list_searches(part, フィルタ)。必須指定項目はpartのみ。
     # フィルタの中身は、(chart, id, myRating)の中から一つだけ指定可能。myRatingは承認されないと使えない
     # その他のフィルタとして、maxResults, pageToken, regionCode, videoCategoryIdがある
@@ -74,29 +73,33 @@ class TopController < ApplicationController
     @count = current_user.player.count
 
     search_player = []
-    current_user.player.each_with_index do |player, i|
+    current_user.player.each do |player|
       search_player << player.name
     end
   
-    if @count == 1 then
-      @youtube_data_0 = find_videos(search_player[0])
-    elsif @count == 2 then
-      @youtube_data_0 = find_videos(search_player[0])
-      @youtube_data_1 = find_videos(search_player[1])
-    else
-      @youtube_data_0 = find_videos(search_player[0])
-      @youtube_data_1 = find_videos(search_player[1])
-      @youtube_data_2 = find_videos(search_player[2])
+    @youtube_function = 0
+
+    if @youtube_function == 1
+      if @count == 1 then
+        @youtube_data_0 = find_videos(search_player[0])
+      elsif @count == 2 then
+        @youtube_data_0 = find_videos(search_player[0])
+        @youtube_data_1 = find_videos(search_player[1])
+      else
+        @youtube_data_0 = find_videos(search_player[0])
+        @youtube_data_1 = find_videos(search_player[1])
+        @youtube_data_2 = find_videos(search_player[2])
+      end
+
+      # ブランドをユーザーに選択させる機能はあとで実装
+      favorite_brand = "YONEX"
+
+      if favorite_brand == "YONEX"
+        favorite_brand_text =  favorite_brand + " テニスラケット"
+        @youtube_racket = find_videos(favorite_brand_text)
+      end
     end
 
-
-    # ユーザーに選択させる機能はあとで実装
-    favorite_brand = "YONEX"
-
-    if favorite_brand == "YONEX"
-      favorite_brand_text =  favorite_brand + "ラケット"
-      @youtube_racket = find_videos(favorite_brand_text)
-    end
 
 
   end

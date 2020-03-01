@@ -21,8 +21,9 @@
   .content-left-header
     Racket Review
   .content-left__youtube
-    - @youtube_racket.items.each do |item|
-      - snippet = item.snippet
-      %p.youtube-title= snippet.title
-      %p.youtube-upload-time= snippet.published_at
-      %iframe#player1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "200", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
+    - if @youtube_function == 1
+      - @youtube_racket.items.each do |item|
+        - snippet = item.snippet
+        %p.youtube-title= snippet.title
+        %p.youtube-upload-time= snippet.published_at
+        %iframe#player1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "200", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}

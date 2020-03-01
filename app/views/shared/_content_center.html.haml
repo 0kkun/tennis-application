@@ -18,43 +18,44 @@
   .content-center-header
     Tour Movies
   .content-center__tour-movies
-    -current_user.player.each do |player|
-      .favorite-players-tag
-        = player.name
+    - if @youtube_function == 1
+      -current_user.player.each do |player|
+        .favorite-players-tag
+          = player.name
 
-    - if @count == 1
-      - @youtube_data_0.items.each do |item|
-        - snippet = item.snippet
-        %p.youtube-title= snippet.title
-        %p.youtube-upload-time= snippet.published_at
-        %iframe#much1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
+      - if @count == 1
+        - @youtube_data_0.items.each do |item|
+          - snippet = item.snippet
+          %p.youtube-title= snippet.title
+          %p.youtube-upload-time= snippet.published_at
+          %iframe#much1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
 
-    - elsif @count == 2
-      - @youtube_data_0.items.each do |item|
-        - snippet = item.snippet
-        %p.youtube-title= snippet.title
-        %p.youtube-upload-time= snippet.published_at
-        %iframe#much1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
-      - @youtube_data_1.items.each do |item|
-        - snippet = item.snippet
-        %p.youtube-title= snippet.title
-        %p.youtube-upload-time= snippet.published_at
-        %iframe#much1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
- 
-    - elsif @count == 3
-      - @youtube_data_0.items.each do |item|
-        - snippet = item.snippet
-        %p.youtube-title= snippet.title
-        %p.youtube-upload-time= snippet.published_at
-        %iframe#much1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
-      - @youtube_data_1.items.each do |item|
-        - snippet = item.snippet
-        %p.youtube-title= snippet.title
-        %p.youtube-upload-time= snippet.published_at
-        %iframe#much1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
-      - @youtube_data_2.items.each do |item|
-        - snippet = item.snippet
-        %p.youtube-title= snippet.title
-        %p.youtube-upload-time= snippet.published_at
-        %iframe#much1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
+      - elsif @count == 2
+        - @youtube_data_0.items.each do |item|
+          - snippet = item.snippet
+          %p.youtube-title= snippet.title
+          %p.youtube-upload-time= snippet.published_at
+          %iframe#much1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
+        - @youtube_data_1.items.each do |item|
+          - snippet = item.snippet
+          %p.youtube-title= snippet.title
+          %p.youtube-upload-time= snippet.published_at
+          %iframe#much1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
+  
+      - elsif @count == 3
+        - @youtube_data_0.items.each do |item|
+          - snippet = item.snippet
+          %p.youtube-title= snippet.title
+          %p.youtube-upload-time= snippet.published_at
+          %iframe#much1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
+        - @youtube_data_1.items.each do |item|
+          - snippet = item.snippet
+          %p.youtube-title= snippet.title
+          %p.youtube-upload-time= snippet.published_at
+          %iframe#much1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
+        - @youtube_data_2.items.each do |item|
+          - snippet = item.snippet
+          %p.youtube-title= snippet.title
+          %p.youtube-upload-time= snippet.published_at
+          %iframe#much1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
 
