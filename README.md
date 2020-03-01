@@ -5,15 +5,13 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
-- 2.5.1p57
+* Ruby version : 2.5.1p57
 
-* System dependencies
-- rails version 5.2.4.1
-- MySQL 5.6.46 Homebrew
+* System dependencies : Rails version 5.2.4.1
+
 * Configuration
 
-* Database creation
+* Database creation : MySQL 5.6.46 Homebrew
 
 ### Tennis Application DB設計
 
