@@ -25,11 +25,28 @@
     padding-left: 8px;
   }
 }
-
-
+.favorite-players-tag {
+  font-size: 13px;
+  display: inline;
+  margin: 5px;
+  background-color: rgb(128, 167, 240);
+  font-family: $font-family;
+}
+.youtube-title {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: $font-family;
+  background-color: rgb(196, 211, 212);
+}
+.youtube-upload-time {
+  font-size: 13px;
+  font-family: $font-family;
+  background-color: white;
+}
 
 .content-center {
-  width: calc( 100%/2 );
+  width: 40%;
+  min-width: 400px;
   height: calc( 100%-20px );
   margin: 10px;
   background-color: #EEEEEE;
@@ -47,6 +64,7 @@
     align-items: center;
     height: 200px;
     width: 95%;
+    min-width: 320px;
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;

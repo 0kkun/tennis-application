@@ -24,12 +24,22 @@
   background-image: image-url("tennis-background-image.jpeg");
   background-size: cover;
 }
-.main {
-  padding-top: 100px; /* ヘッダー分 */
-  width  : 100%;
-  height: calc( 100% - 30px); /* フッター分 */
-  display: flex;
+
+@media screen and (min-width: 640px) {
+ // （〇〇px以上の画面サイズのときのCSS）
+  .main {
+    padding-top: 100px; /* ヘッダー分 */
+    width  : 100%;
+    height: calc( 100% - 30px); /* フッター分 */
+    display: flex;
+  }
 }
-
-
-
+@media screen and (max-width: 640px) {
+  // （〇〇px以下の画面サイズのときのCSS）
+   .main {
+     padding-top: 100px; /* ヘッダー分 */
+     width  : 100%;
+     height: calc( 100% - 30px); /* フッター分 */
+     margin: auto 0;
+   }
+ }
