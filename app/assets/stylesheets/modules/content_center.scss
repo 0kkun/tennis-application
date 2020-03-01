@@ -45,7 +45,8 @@
 }
 
 .content-center {
-  width: calc( 100%/2 );
+  width: 40%;
+  min-width: 400px;
   height: calc( 100%-20px );
   margin: 10px;
   background-color: #EEEEEE;
