@@ -14,6 +14,14 @@ Favorite.create!(
   ]
 )
 
+BrandUser.create!(
+  [
+    {
+      user_id: 1, brand_id: 1,
+    }
+  ]
+)
+
 Player.create!(
   [
     {
