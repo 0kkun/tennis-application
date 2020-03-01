@@ -1,0 +1,3 @@
+class BrandUser < ApplicationRecord
+  
+end
