@@ -82,15 +82,15 @@ class TopController < ApplicationController
       @youtube_function = 1
 
       if @youtube_function == 1
-        if @count == 1 then
+        # if @count == 1 then
           @youtube_data_0 = find_videos(search_player[0])
-        elsif @count == 2 then
-          @youtube_data_0 = find_videos(search_player[0])
-          @youtube_data_1 = find_videos(search_player[1])
-        else
-          @youtube_data_0 = find_videos(search_player[0])
-          @youtube_data_1 = find_videos(search_player[1])
-          @youtube_data_2 = find_videos(search_player[2])
+        # elsif @count == 2 then
+        #   @youtube_data_0 = find_videos(search_player[0])
+        #   @youtube_data_1 = find_videos(search_player[1])
+        # else
+        #   @youtube_data_0 = find_videos(search_player[0])
+        #   @youtube_data_1 = find_videos(search_player[1])
+        #   @youtube_data_2 = find_videos(search_player[2])
         end
 
         # ブランドをユーザーに選択させる機能は今後実装
