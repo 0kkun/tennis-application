@@ -1,0 +1,26 @@
+
+
+.wrapper
+  = render "shared/header"
+  .main
+    -# .favorite-player
+    -#   .favorite-player__title お気に入りのブランド
+    -#     -@user.brands.each do |brand|
+    -#       %li=brand.name
+  -#       -form_for 
+
+  -#     %table
+  -#       %thead
+  -#         %tr
+  -#           %th.favorite-player__content-title-btn 削除
+  -#           %th.favorite-player__content-title 選手名(英語)
+  -#           %th.favorite-player__content-title 選手名(日本語)
+  -#       %tbody
+  -#         / 削除リンクの為にindex付きのメソッドを使用
+  -#         - @user.player.each_with_index do |player, i|
+  -#           %tr
+  -#             %td= link_to "削除",favorite_path(@favorites[i][:id]),class:"favorite-delete", method: :delete
+  -#             %td= player.name
+  -#             %td= player.name_jp
+  -#   = link_to "選手一覧", players_path, class: "players-link"
+  = render "shared/footer"

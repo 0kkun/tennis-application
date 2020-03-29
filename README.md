@@ -1,5 +1,14 @@
 # README
 
+## このアプリについて
+- ユーザーの好みに合わせて表示する情報を変えることができるウェブアプリです。
+- favarite playerを選択することで表示が変わります。
+- ニュース、youtubeの情報が切り替わるようになっています。
+
+## 使用している技術
+- スクレイピング(ニュース、ランキング、大会情報)
+- youtube API
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
