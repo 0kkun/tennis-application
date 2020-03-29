@@ -1,6 +1,7 @@
 class TopController < ApplicationController
 
-  GOOGLE_API_KEY = Rails.application.credentials.google[:secret_access_key]
+  # GOOGLE_API_KEY = Rails.application.credentials.google[:secret_access_key]
+  GOOGLE_API_KEY = ENV['secret_access_key']
 
 
   # 検索実行メソッド。keywordをこのメソッドに渡すと実行する
