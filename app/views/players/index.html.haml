@@ -13,8 +13,7 @@
   = render "shared/header"
   .main
     .favorite-player
-      .favorite-player__title 選手一覧
-
+      .favorite-player__title 選手一覧 (3人までお気に入り登録可能)
 
       %table
         %thead
@@ -27,7 +26,7 @@
             %tr
               / お気に入り登録ボタン ルートに従いパスを記述、POSTメソッドに指定
               %td= link_to "登録", add_player_path(player),class:"favorite-btn", method: :post
-              / 本の詳細へのリンク
+              / 詳細へのリンク
               %td= player.name
               %td= player.name_jp
     = link_to "戻る", user_path(current_user), class: "players-link"
