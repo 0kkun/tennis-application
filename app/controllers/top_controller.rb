@@ -16,7 +16,7 @@ class TopController < ApplicationController
       #リファレンス： https://developers.google.com/youtube/v3/docs/videos/list?hl=ja
       q: keyword,
       type: 'video',
-      max_results: 2,
+      max_results: 1,
       order: :date,
       page_token: next_page_token,
       published_after: after.iso8601,
@@ -79,7 +79,7 @@ class TopController < ApplicationController
         search_player << player.name
       end
     
-      @youtube_function = 0
+      @youtube_function = 1
 
       if @youtube_function == 1
         if @count == 1 then
