@@ -79,7 +79,7 @@ class TopController < ApplicationController
         search_player << player.name
       end
     
-      @youtube_function = 1
+      @youtube_function = 0
 
       if @youtube_function == 1
         if @count == 1 then
