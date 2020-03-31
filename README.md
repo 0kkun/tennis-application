@@ -13,6 +13,7 @@
 ### 本番環境
 - デプロイ先：Heroku
 - https://my-tennis-app.herokuapp.com/
+- ID : test@gmail.com / PASS : 11111111
 
 ### 制作背景(意図)
 - 色々なサイトにアクセスして情報を集める手間を省き、効率化するため
