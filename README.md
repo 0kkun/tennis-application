@@ -1,28 +1,45 @@
 # README
 
-## このアプリについて
-- ユーザーの好みに合わせて表示する情報を変えることができるウェブアプリです。
-- favarite playerを選択することで表示が変わります。
-- ニュース、youtubeの情報が切り替わるようになっています。
 
-## 使用している技術
+# About this application
+### 名称
+- Tennis app
+
+### 概要
+- ユーザーの好みに合わせてテニスの情報をまとめることができるアプリ
+- お気に入り選手を登録することでニュース・動画を一覧表示する
+- 大会情報・ランキングを他サイトからスクレイピングして表示する
+
+### 本番環境
+- デプロイ先：Heroku
+
+### 制作背景(意図)
+- 色々なサイトにアクセスして情報を集める手間を省き、効率化するため
+
+### 工夫したポイント
+- apiを用いて情報を検索・取得できるようにした
+- レスポンシブデザインを採用
+- 
+
+### 使用技術 (詳細はdockerfileに記載)
+- Ruby on Rails 5.2.4.1
+- ruby 2.5.1p57
+- MySQL 5.6.46 Homebrew
+- google api
+- scraping
+- jQuery
+
+### 課題や今後実装したい機能
+- お気に入りブランド登録機能
+- ブランドに基づいて動画を表示する機能
+
+
+### 使用している技術
 - スクレイピング(ニュース、ランキング、大会情報)
 - youtube API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
-
-* Ruby version : 2.5.1p57
-
-* System dependencies : Rails version 5.2.4.1
-
-* Configuration
-
-* Database creation : MySQL 5.6.46 Homebrew
-
-### Tennis Application DB設計
+###  DB設計
 
 ## usersテーブル
 |Column|Type|Options|
@@ -79,14 +96,3 @@ Things you may want to cover:
 - belongs_to :users
 - belongs_to :brands
 
-
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
