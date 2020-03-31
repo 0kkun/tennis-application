@@ -19,9 +19,8 @@
 ### 工夫したポイント
 - apiを用いて情報を検索・取得できるようにした
 - レスポンシブデザインを採用
-- 
 
-### 使用技術 (詳細はdockerfileに記載)
+### 使用技術
 - Ruby on Rails 5.2.4.1
 - ruby 2.5.1p57
 - MySQL 5.6.46 Homebrew
@@ -39,7 +38,7 @@
 - youtube API
 
 
-###  DB設計
+##  DB設計
 
 ## usersテーブル
 |Column|Type|Options|
