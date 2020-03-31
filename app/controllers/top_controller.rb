@@ -72,15 +72,15 @@ class TopController < ApplicationController
       @favorite_player_name1 = Player.select("name").where(player_id: :favorite_player[0])
       # @favorites = Favorite.where("user_id = ?", current_user)
 
-      # @count = current_user.player.count
-      @count = 1
+      @count = current_user.player.count
+      # @count = 1
 
       search_player = []
       current_user.player.each do |player|
         search_player << player.name
       end
     
-      @youtube_function = 1
+      @youtube_function = 0
 
       if @youtube_function == 1
         if @count == 1 then

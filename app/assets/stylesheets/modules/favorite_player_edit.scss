@@ -2,6 +2,8 @@
 
 .players-link {
   font-size: 16px;
+  margin-left: 30px;
+  width: 150px;
   color: white;
   font-family: $font-family;
   background-color: #38aef0;
@@ -10,6 +12,8 @@
   margin-top: 20px;
   padding: 5px;
   height: 32px;
+  display: block;
+  text-align: center;
 }
 td {
   height: 30px;
@@ -54,23 +58,23 @@ table {
 
 
 .favorite-player {
-  width  : 600px;
-  height: calc( 100vh - 160px);
+  height: 500px;
   background-color: white;
-  margin: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
   &__title{
     font-size: 16px;
     color: white;
     font-family: $font-family;
     text-align: center;
-    background-color: lightslategrey;
+    background-color: rgb(76, 114, 151);
   }
   &__content-title-btn {
     font-size: 16px;
     color: black;
     font-family: $font-family;
     border: 1px solid black;
-    width: 100px;
+    min-width: 50px;
     text-align: center;
   }
   &__content-title {

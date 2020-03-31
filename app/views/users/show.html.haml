@@ -12,7 +12,8 @@
 
 .wrapper
   = render "shared/header"
-  .main
+  .favorite-main
+    = link_to "選手一覧", players_path, class: "players-link"
     .favorite-player
       .favorite-player__title お気に入りの選手
       %table
@@ -28,9 +29,9 @@
               %td= link_to "削除",favorite_path(@favorites[i][:id]),class:"favorite-delete", method: :delete
               %td= player.name
               %td= player.name_jp
-    = link_to "選手一覧", players_path, class: "players-link"
 
 
+  = render "shared/footer"
 
 
 

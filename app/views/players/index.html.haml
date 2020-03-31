@@ -11,7 +11,8 @@
 
 .wrapper
   = render "shared/header"
-  .main
+  .favorite-main
+    = link_to "戻る", user_path(current_user), class: "players-link"
     .favorite-player
       .favorite-player__title 選手一覧 (3人までお気に入り登録可能)
 
@@ -29,5 +30,4 @@
               / 詳細へのリンク
               %td= player.name
               %td= player.name_jp
-    = link_to "戻る", user_path(current_user), class: "players-link"
   = render "shared/footer"
